@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@200;300;400;500;600;700&family=Salsa&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#map {
+  height: 100vh;
+  z-index: 20;
+}
+
+body {
+  font-family: "poppind";
+}
+
+.wrapper {
+  display: flex;
+  align-items: start;
+  margin-top: 90px;
+  position: fixed;
+  left: 10px;
+  z-index: 50;
+}
+
+aside {
+  background: rgba(95, 158, 160, 0.513);
+  color: white;
+  height: auto;
+  max-height: 800px;
+  width: 280px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.aside-form-close {
+  display: none;
+}
+aside::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+aside::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.173);
+  border-radius: 4px;
+}
+aside:hover {
+  background: rgb(49, 81, 82);
+}
+aside h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "indie flower";
+  font-size: 33px;
+  letter-spacing: 9px;
+  background: rgb(21, 35, 36);
+  padding: 3px;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+}
+
+/* toggle başlangıç */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.5s;
+  margin-left: 20px;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(92, 130, 255);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1 {
+  width: 50%;
+}
+
+#bar2 {
+  width: 50%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.1s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* Toggle bitiş */
+form {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form select {
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+}
+.buttons {
+  flex-direction: row;
+}
+.buttons button {
+  flex: 1;
+  background: black;
+  color: white;
+  font-weight: bold;
+  font-family: "poppins";
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.buttons button:first-child {
+  background: rgba(125, 245, 5, 0.711);
+}
+
+.buttons button:hover {
+  filter: brightness(70%);
+  border: 2px solid purple;
+}
+
+ul {
+  height: 100%;
+  margin-top: 20px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: auto;
+}
+ul::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+ul::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 4px;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(70, 70, 70);
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center;
+}
+li p:first-child {
+  font-family: "indie flower";
+  font-size: x-large;
+}
+
+li p span:first-child {
+  font-weight: bold;
+}
+
+li .icons {
+  display: flex;
+  gap: 10px;
+}
+li i {
+  cursor: pointer;
+  font-size: 21px;
+}
+li .icons i:first-child:hover {
+  filter: drop-shadow(0 0 10px rgb(0, 179, 255));
+}
+
+li .icons i:last-child:hover {
+  filter: drop-shadow(0 0 10px red);
+}
